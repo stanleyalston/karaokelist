@@ -1,9 +1,21 @@
 Karaokelist::Application.routes.draw do
-  get "pages/home"
+  
+  
+  resources :karaokes do
+    
+  end
+  
+  root :to => 'pages#home'
+  match '/new' => 'karaokes#new'
+  match '/list' => 'karaokes#index'
+  #get "pages/home"
 
-  get "pages/new"
+  #get "karaokes/new"
 
-  get "pages/list"
+  #get "karaokes/"
+  
+  #get "karaokes/indedx"
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

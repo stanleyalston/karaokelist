@@ -1,14 +1,9 @@
 class PagesController < ApplicationController
-  def home
-  end
-
   def new
-    #@karaoke = Karaoke.create!(params[:message])
-    
-    #@message.save    
+    @karaoke = Karaoke.new
   end
-
-  def list
-    @karaokes = Karaoke.all    
+  
+  def karaokes
+    @karaokes = Karaoke.all
   end
 end
