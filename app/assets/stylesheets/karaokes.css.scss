@@ -1,3 +1,21 @@
 // Place all the styles related to the Karaokes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$blue: #3bbcfe;
+$font: normal 12px arial;
+
+body{
+	font: $font;	
+}
+
+table.karaoke-listing{
+	padding: 2px;
+	border: 1px solid #ccc;
+	width: 300px;
+	font: $font;
+	tr td{
+		padding:3px 0px;	
+		border-bottom: 1px dotted #ccc;
+	}
+}
