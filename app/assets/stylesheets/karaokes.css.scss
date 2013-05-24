@@ -6,16 +6,29 @@ $blue: #3bbcfe;
 $font: normal 12px arial;
 
 body{
-	font: $font;	
+	font:$font;	
 }
 
-table.karaoke-listing{
-	padding: 2px;
-	border: 1px solid #ccc;
-	width: 300px;
-	font: $font;
+@mixin table-base{
 	tr td{
 		padding:3px 0px;	
 		border-bottom: 1px dotted #ccc;
 	}
+	
 }
+
+@mixin left($data){
+	float:left;
+	padding-left:$data;
+}
+
+.karaoke-listing{
+	@include left(30px);
+	@include table-base;
+	padding:2px;
+	border:1px solid #ccc;
+	width:300px;
+	font:$font;
+}
+
+
